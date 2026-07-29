@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+:root {
+  --misho-cream: #f2edd5;
+  --misho-red: #e7390d;
+  --misho-orange: #f26716;
+  --misho-green: #084a24;
+  --misho-green-deep: #04261e;
+  --misho-bg: #0a0a0a;
+  --misho-card: #141414;
+  --misho-card2: #1c1c1c;
+  --misho-muted: #8a8a8a;
+  --misho-border: rgba(242, 237, 213, 0.08);
+}
+
+@theme inline {
+  --color-misho-cream: var(--misho-cream);
+  --color-misho-red: var(--misho-red);
+  --color-misho-orange: var(--misho-orange);
+  --color-misho-green: var(--misho-green);
+  --color-misho-green-deep: var(--misho-green-deep);
+  --color-misho-bg: var(--misho-bg);
+  --color-misho-card: var(--misho-card);
+  --color-misho-card2: var(--misho-card2);
+  --color-misho-muted: var(--misho-muted);
+  --color-misho-border: var(--misho-border);
+  --font-sans: var(--font-lato);
+}
+
+body {
+  background: var(--misho-bg);
+  color: var(--misho-cream);
+}
