@@ -1,24 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  --misho-cream: #f2edd5;
+  --misho-white: #ffffff;
+  /* Reserved for future positive/negative indicators, not the base palette. */
   --misho-red: #e7390d;
-  --misho-orange: #f26716;
   --misho-green: #084a24;
-  --misho-green-deep: #04261e;
-  --misho-bg: #0a0a0a;
-  --misho-card: #141414;
-  --misho-card2: #1c1c1c;
+  --misho-bg: #000000;
+  --misho-card: #000000;
+  --misho-card2: #000000;
   --misho-muted: #8a8a8a;
-  --misho-border: rgba(242, 237, 213, 0.08);
+  --misho-border: rgba(255, 255, 255, 0.1);
 }
 
 @theme inline {
-  --color-misho-cream: var(--misho-cream);
+  --color-misho-white: var(--misho-white);
   --color-misho-red: var(--misho-red);
-  --color-misho-orange: var(--misho-orange);
   --color-misho-green: var(--misho-green);
-  --color-misho-green-deep: var(--misho-green-deep);
   --color-misho-bg: var(--misho-bg);
   --color-misho-card: var(--misho-card);
   --color-misho-card2: var(--misho-card2);
@@ -27,7 +24,86 @@
   --font-sans: var(--font-lato);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--misho-bg);
-  color: var(--misho-cream);
+  color: var(--misho-white);
+}
+
+/* Scrollbar-less horizontal snap carousels (still scrollable via touch/drag) */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.08);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 7s ease-in-out infinite;
+}
+
+/* Applied by the Reveal client component once an element enters the viewport */
+.reveal {
+  opacity: 0;
+}
+
+.reveal-visible {
+  animation: fade-in-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-float,
+  .animate-glow-pulse {
+    animation: none;
+  }
+  .reveal {
+    opacity: 1;
+  }
+  .reveal-visible {
+    animation: none;
+  }
 }

@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className={`${lato.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-misho-bg text-misho-cream font-sans">
+      <body className="min-h-full flex flex-col bg-misho-bg text-misho-white font-sans">
         {children}
       </body>
     </html>
