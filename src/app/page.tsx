@@ -113,7 +113,7 @@ export default function Home() {
 
             <p className="max-w-xl text-balance text-misho-muted">
               Misho es una app para llevar tus finanzas personales de forma simple
-              y privada — sin vinculación bancaria, sin funciones de más. Solo lo
+              y privada. Sin vinculación bancaria, sin funciones de más. Solo lo
               necesario para saber en qué se va tu dinero.
             </p>
 
@@ -129,10 +129,10 @@ export default function Home() {
           <Reveal>
             <Eyebrow>Nuestro origen</Eyebrow>
             <h2 className="text-2xl font-bold sm:text-3xl">
-              Nació de un Excel de tres hojas
+              Nació de una hoja de cálculo de tres hojas
             </h2>
             <p className="mt-4 text-misho-muted">
-              Dashboard, Ingresos y Egresos: así de simple era el control de
+              Dashboard, Ingresos y Egresos. Así de simple era el control de
               gastos de su creador, y así de simple sigue siendo Misho. Cada
               pantalla y cada dato que te pide tiene que justificarse por sí
               mismo; si no, no entra en la app.
@@ -157,7 +157,7 @@ export default function Home() {
           <Reveal className="text-center">
             <Eyebrow>Qué puedes hacer</Eyebrow>
             <h2 className="text-2xl font-bold sm:text-3xl">
-              Cuatro pantallas. Nada más.
+              Cuatro pantallas. Simplicidad al máximo.
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-misho-muted">
               Toca cada una para ver qué resuelve: sin menús escondidos ni
@@ -219,7 +219,10 @@ export default function Home() {
       </main>
 
       <footer className="border-t border-misho-border/60 px-6 py-8 text-center text-xs text-misho-muted">
-        © {new Date().getFullYear()} Misho — Todos los derechos reservados.
+        <p>© {new Date().getFullYear()} Misho — Todos los derechos reservados.</p>
+        <a href="/privacidad" className="mt-2 inline-block underline hover:text-misho-white">
+          Política de privacidad
+        </a>
       </footer>
     </>
   );
