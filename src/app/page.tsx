@@ -28,7 +28,7 @@ const MODULOS = [
   },
   {
     title: "Gastos",
-    summary: "Débito, efectivo o crédito — Misho sabe qué resta y qué no.",
+    summary: "Débito, efectivo o crédito: Misho sabe qué resta y qué no.",
     bullets: [
       "Los gastos a crédito se muestran pero no afectan tu balance hasta pagar la tarjeta",
       "Categorías: comida, transporte, compras, diversión, servicios",
@@ -37,7 +37,7 @@ const MODULOS = [
   },
   {
     title: "Ahorro y Deudas",
-    summary: "Lo que apartas y lo que debes — o te deben — siempre a la vista.",
+    summary: "Lo que apartas, y lo que debes o lo que te deben. Todo siempre a la vista.",
     bullets: [
       "Registra tu ahorro del mes y consulta el acumulado histórico",
       "Lleva control de lo que debes y lo que te deben",
@@ -132,7 +132,7 @@ export default function Home() {
               Nació de un Excel de tres hojas
             </h2>
             <p className="mt-4 text-misho-muted">
-              Dashboard, Ingresos y Egresos — así de simple era el control de
+              Dashboard, Ingresos y Egresos: así de simple era el control de
               gastos de su creador, y así de simple sigue siendo Misho. Cada
               pantalla y cada dato que te pide tiene que justificarse por sí
               mismo; si no, no entra en la app.
@@ -160,7 +160,7 @@ export default function Home() {
               Cuatro pantallas. Nada más.
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-misho-muted">
-              Toca cada una para ver qué resuelve — sin menús escondidos ni
+              Toca cada una para ver qué resuelve: sin menús escondidos ni
               configuraciones que no vas a usar.
             </p>
           </Reveal>
@@ -176,7 +176,7 @@ export default function Home() {
             <Eyebrow>Tus datos, en tu dispositivo</Eyebrow>
             <h2 className="text-2xl font-bold sm:text-3xl">Privado por diseño</h2>
             <p className="mt-4 text-misho-muted">
-              Misho guarda tu información localmente por default — no hay
+              Misho guarda tu información localmente por default, no hay
               vinculación bancaria automática ni se piden más datos de los
               indispensables. Si quieres respaldo en la nube y sincronizar entre
               dispositivos, esa será una opción, no un requisito.
@@ -192,7 +192,7 @@ export default function Home() {
               <h2 className="text-2xl font-bold sm:text-3xl">Hablemos</h2>
               <p className="mx-auto mt-4 max-w-md text-misho-muted">
                 ¿Dudas, feedback o quieres ser de los primeros en probarla?
-                Escríbenos.
+                Escríbe al equipo de Misho.
               </p>
             </div>
 
@@ -209,7 +209,10 @@ export default function Home() {
                 label="Instagram"
                 href="https://www.instagram.com/immishoapp/"
               />
-              <SocialButton icon="tiktok" label="TikTok" />
+              <SocialButton 
+              icon="tiktok" 
+              label="TikTok"
+              href="https://www.tiktok.com/@immishoapp" />
             </div>
           </Reveal>
         </section>
